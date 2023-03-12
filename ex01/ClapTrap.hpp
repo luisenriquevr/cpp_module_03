@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 11:55:07 by lvarela          ###   ########.fr       */
+/*   Created: 2023/03/12 11:54:43 by lvarela           #+#    #+#             */
+/*   Updated: 2023/03/12 11:54:44 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class ClapTrap {
         void beRepaired(unsigned int amount);
 };
 
-std::ostream &operator<<(std::ostream &COUT, ClapTrap const &clapTrap);
+std::ostream &operator<<(std::ostream &COUT, const ClapTrap &clapTrap);
 
 
 #endif

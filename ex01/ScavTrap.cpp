@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/12 11:55:08 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 11:55:09 by lvarela          ###   ########.fr       */
+/*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
+/*   Updated: 2023/03/12 11:54:32 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-int main() {
-    ClapTrap yo("yo");
-    ClapTrap tu("tu");
-    ClapTrap el;
-
-    yo.attack("tu");
-    tu.takeDamage(4);
-    tu.beRepaired(3);
-
-    el.attack("yo");
-    
-    return 0;
+ScavTrap::ScavTrap() : ClapTrap() {
+    std::cout << "ScavTrap default constructor called" << std::endl;
+    this->_hitPoints = 100;
+    this->_energyPoints = 50;
+    this->_attackDamage = 20;
 }
