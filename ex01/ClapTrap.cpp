@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:40 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 11:54:41 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/12 12:16:35 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap() : _name("unnamed"), _hitPoints(10), _energyPoints(10), _att
 }
 
 ClapTrap::ClapTrap(const std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-    std::cout << "Parameter constructor called" << std::endl;
+    std::cout << "Name constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &toCopy) {

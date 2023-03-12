@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:15 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 11:54:17 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/12 13:44:43 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class ScavTrap : public ClapTrap {
         ScavTrap &operator=(const ScavTrap &toCopy);
         ~ScavTrap();
 
-        void attack(std::string const &target);
+        void attack(const std::string &target);
         void guardGate();
 };
 
