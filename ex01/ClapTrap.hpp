@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:43 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 11:54:44 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/12 12:09:59 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <iostream>
 
 class ClapTrap {
-    private:
+    protected:
         std::string _name;
         unsigned int _hitPoints;
         unsigned int _energyPoints;

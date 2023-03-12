@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 11:54:32 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/12 12:12:54 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,4 @@ ScavTrap::ScavTrap() : ClapTrap() {
     this->_energyPoints = 50;
     this->_attackDamage = 20;
 }
+
