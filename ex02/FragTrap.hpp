@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/12 11:54:15 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/13 19:35:20 by lvarela          ###   ########.fr       */
+/*   Created: 2023/03/13 20:32:17 by lvarela           #+#    #+#             */
+/*   Updated: 2023/03/13 20:32:19 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include <iostream>
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class FragTrap : public ClapTrap {
     private:
 
     public:
-        ScavTrap();
-        ScavTrap(const std::string name);
-        ScavTrap(const ScavTrap &toCopy);
-        ScavTrap &operator=(const ScavTrap &toCopy);
-        ~ScavTrap();
+        FragTrap();
+        FragTrap(const std::string name);
+        FragTrap(const FragTrap &toCopy);
+        FragTrap &operator=(const FragTrap &toCopy);
+        ~FragTrap();
 
-        void attack(const std::string &target);
-        void guardGate();
+        void highFiveGuys(void);
 };
 
-std::ostream &operator<<(std::ostream &COUT, const ScavTrap &scavTrap);
+std::ostream &operator<<(std::ostream &COUT, const FragTrap &fragTrap);
 
 #endif

@@ -6,16 +6,16 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/13 19:25:20 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/13 20:46:19 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
-    ScavTrap yo("yo");
-    ScavTrap tu("tu");
-    ScavTrap el;
+    FragTrap yo("yo");
+    FragTrap tu("tu");
+    FragTrap el;
 
     std::cout << "yo has " << yo.getHitpoints() << " hitpoints" << std::endl;
     std::cout << "tu has " << tu.getEnergyPoints() << " hitpoints" << std::endl;
@@ -26,6 +26,7 @@ int main() {
     tu.beRepaired(3);
     el.takeDamage(6);
     el.attack("yo");
+    yo.highFiveGuys();
 
     return 0;
 }
