@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:15 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/19 13:20:11 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/19 14:41:51 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : public virtual ClapTrap {
    private:
    public:
     ScavTrap();

@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:03 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/19 13:20:06 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/19 14:37:47 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ClapTrap::ClapTrap(const ClapTrap &toCopy) {
 ClapTrap &ClapTrap::operator=(const ClapTrap &toCopy) {
     std::cout << "Assigned constructor called" << std::endl;
     if (this != &toCopy) {
-        (std::string) this->_name = (std::string) toCopy._name;
+        (std::string) this->_name = (std::string)toCopy._name;
         this->_hitPoints = toCopy._hitPoints;
         this->_energyPoints = toCopy._energyPoints;
         this->_attackDamage = toCopy._attackDamage;
@@ -52,23 +52,23 @@ void ClapTrap::setAttackDamage(unsigned int atackDamage) {
     this->_attackDamage = atackDamage;
 }
 
-std::string ClapTrap::getName() {
+std::string ClapTrap::getName() const {
     return this->_name;
 }
 
-unsigned int  ClapTrap::getHitpoints() {
-    return (int)this->_hitPoints;
+unsigned int ClapTrap::getHitpoints() const {
+    return this->_hitPoints;
 }
 
-unsigned int ClapTrap::getEnergyPoints() {
-    return (int)this->_energyPoints;
+unsigned int ClapTrap::getEnergyPoints() const {
+    return this->_energyPoints;
 }
 
-unsigned int ClapTrap::getAatackDamage() {
-    return (int)this->_attackDamage;
+unsigned int ClapTrap::getAatackDamage() const {
+    return this->_attackDamage;
 }
 
-void ClapTrap::attack(std::string const &target) {
+void ClapTrap::attack(const std::string &target) {
     std::cout << "ClapTrap " << this->getName() << " attacks " << target << ", causing " << this->getAatackDamage() << " points of damage!" << std::endl;
 }
 
@@ -78,4 +78,9 @@ void ClapTrap::takeDamage(unsigned int amount) {
 
 void ClapTrap::beRepaired(unsigned int amount) {
     std::cout << "Claptrap " << this->getName() << " repairs " << amount << " points of damage." << std::endl;
+}
+
+std::ostream &operator<<(std::ostream &COUT, const ClapTrap &clapTrap) {
+    COUT << clapTrap.getName();
+    return COUT;
 }

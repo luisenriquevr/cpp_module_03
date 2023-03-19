@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:40 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/19 13:20:07 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/19 14:37:41 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,20 +52,20 @@ void ClapTrap::setAttackDamage(unsigned int atackDamage) {
     this->_attackDamage = atackDamage;
 }
 
-std::string ClapTrap::getName() {
+std::string ClapTrap::getName() const {
     return this->_name;
 }
 
-unsigned int ClapTrap::getHitpoints() {
-    return (int)this->_hitPoints;
+unsigned int ClapTrap::getHitpoints() const {
+    return this->_hitPoints;
 }
 
-unsigned int ClapTrap::getEnergyPoints() {
-    return (int)this->_energyPoints;
+unsigned int ClapTrap::getEnergyPoints() const {
+    return this->_energyPoints;
 }
 
-unsigned int ClapTrap::getAatackDamage() {
-    return (int)this->_attackDamage;
+unsigned int ClapTrap::getAatackDamage() const {
+    return this->_attackDamage;
 }
 
 void ClapTrap::attack(std::string const &target) {
@@ -78,4 +78,9 @@ void ClapTrap::takeDamage(unsigned int amount) {
 
 void ClapTrap::beRepaired(unsigned int amount) {
     std::cout << "Claptrap " << this->getName() << " repairs " << amount << " points of damage." << std::endl;
+}
+
+std::ostream &operator<<(std::ostream &COUT, const ClapTrap &clapTrap) {
+    COUT << clapTrap.getName();
+    return COUT;
 }
