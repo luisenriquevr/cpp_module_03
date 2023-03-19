@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:40 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 12:16:35 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/19 13:20:07 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ClapTrap::ClapTrap(const ClapTrap &toCopy) {
 ClapTrap &ClapTrap::operator=(const ClapTrap &toCopy) {
     std::cout << "Assigned constructor called" << std::endl;
     if (this != &toCopy) {
-        (std::string) this->_name = (std::string) toCopy._name;
+        (std::string) this->_name = (std::string)toCopy._name;
         this->_hitPoints = toCopy._hitPoints;
         this->_energyPoints = toCopy._energyPoints;
         this->_attackDamage = toCopy._attackDamage;
@@ -56,7 +56,7 @@ std::string ClapTrap::getName() {
     return this->_name;
 }
 
-unsigned int  ClapTrap::getHitpoints() {
+unsigned int ClapTrap::getHitpoints() {
     return (int)this->_hitPoints;
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 13:46:30 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/19 13:20:08 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ ScavTrap::ScavTrap(const ScavTrap &toCopy) : ClapTrap(toCopy) {
 ScavTrap &ScavTrap::operator=(const ScavTrap &toCopy) {
     std::cout << "ScavTrap assigned constructor called" << std::endl;
     if (this != &toCopy) {
-        (std::string) this->_name = (std::string) toCopy._name;
+        (std::string) this->_name = (std::string)toCopy._name;
         this->_hitPoints = toCopy._hitPoints;
         this->_energyPoints = toCopy._energyPoints;
         this->_attackDamage = toCopy._attackDamage;

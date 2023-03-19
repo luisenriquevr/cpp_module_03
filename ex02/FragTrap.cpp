@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/13 20:46:55 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/19 13:20:09 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ FragTrap::FragTrap(const FragTrap &toCopy) : ClapTrap(toCopy) {
 FragTrap &FragTrap::operator=(const FragTrap &toCopy) {
     std::cout << "FragTrap default constructor called" << std::endl;
     if (this != &toCopy) {
-        (std::string) this->_name = (std::string) toCopy._name;
+        (std::string) this->_name = (std::string)toCopy._name;
         this->_hitPoints = toCopy._hitPoints;
         this->_energyPoints = toCopy._energyPoints;
         this->_attackDamage = toCopy._attackDamage;

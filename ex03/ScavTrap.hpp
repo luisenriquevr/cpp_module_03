@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:15 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/12 13:44:43 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/19 13:20:11 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,20 @@
 #define SCAVTRAP_HPP
 
 #include <iostream>
+
 #include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {
-    private:
+   private:
+   public:
+    ScavTrap();
+    ScavTrap(const std::string name);
+    ScavTrap(const ScavTrap &toCopy);
+    ScavTrap &operator=(const ScavTrap &toCopy);
+    ~ScavTrap();
 
-    public:
-        ScavTrap();
-        ScavTrap(const std::string name);
-        ScavTrap(const ScavTrap &toCopy);
-        ScavTrap &operator=(const ScavTrap &toCopy);
-        ~ScavTrap();
-
-        void attack(const std::string &target);
-        void guardGate();
+    void attack(const std::string &target);
+    void guardGate();
 };
 
 std::ostream &operator<<(std::ostream &COUT, const ScavTrap &scavTrap);

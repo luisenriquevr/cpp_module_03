@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:32:17 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/13 20:32:19 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/03/19 13:20:11 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@
 #define FRAGTRAP_HPP
 
 #include <iostream>
+
 #include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap {
-    private:
+   private:
+   public:
+    FragTrap();
+    FragTrap(const std::string name);
+    FragTrap(const FragTrap &toCopy);
+    FragTrap &operator=(const FragTrap &toCopy);
+    ~FragTrap();
 
-    public:
-        FragTrap();
-        FragTrap(const std::string name);
-        FragTrap(const FragTrap &toCopy);
-        FragTrap &operator=(const FragTrap &toCopy);
-        ~FragTrap();
-
-        void highFiveGuys(void);
+    void highFiveGuys(void);
 };
 
 std::ostream &operator<<(std::ostream &COUT, const FragTrap &fragTrap);
