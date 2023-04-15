@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/19 14:34:03 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/15 19:28:29 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main() {
 
     std::cout << "yo has " << yo.getHitpoints() << " hitpoints" << std::endl;
     std::cout << "tu has " << tu.getEnergyPoints() << " hitpoints" << std::endl;
-    std::cout << "el has " << el.getAatackDamage() << " hitpoints" << std::endl;
+    std::cout << "el has " << el.getAtackDamage() << " hitpoints" << std::endl;
 
     yo.attack("tu");
     tu.takeDamage(4);

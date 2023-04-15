@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:40 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/20 17:16:12 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/15 20:34:57 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ClapTrap::ClapTrap(const ClapTrap &toCopy) {
 ClapTrap &ClapTrap::operator=(const ClapTrap &toCopy) {
     std::cout << "Assigned constructor called" << std::endl;
     if (this != &toCopy) {
-        (std::string)this->_name = (std::string)toCopy._name;
+        this->_name = toCopy._name;
         this->_hitPoints = toCopy._hitPoints;
         this->_energyPoints = toCopy._energyPoints;
         this->_attackDamage = toCopy._attackDamage;
@@ -64,12 +64,12 @@ unsigned int ClapTrap::getEnergyPoints() const {
     return this->_energyPoints;
 }
 
-unsigned int ClapTrap::getAatackDamage() const {
+unsigned int ClapTrap::getAtackDamage() const {
     return this->_attackDamage;
 }
 
 void ClapTrap::attack(std::string const &target) {
-    std::cout << "ClapTrap " << this->getName() << " attacks " << target << ", causing " << this->getAatackDamage() << " points of damage!" << std::endl;
+    std::cout << "ClapTrap " << this->getName() << " attacks " << target << ", causing " << this->getAtackDamage() << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
