@@ -6,7 +6,7 @@
 #    By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/22 18:00:26 by lvarela           #+#    #+#              #
-#    Updated: 2023/03/28 18:55:14 by lvarela          ###   ########.fr        #
+#    Updated: 2023/04/15 20:37:25 by lvarela          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,4 +34,4 @@ fclean	:	clean
 
 re		:	fclean all
 
-.PHONY	:	all $(NAME) clean fclean re
+.PHONY	:	all clean fclean re
