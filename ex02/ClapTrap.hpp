@@ -6,14 +6,27 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:43 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/15 19:28:26 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/17 20:07:53 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#ifndef ClapTrap_HPP
+# define ClapTrap_HPP
+#ifndef COLORS_HPP
+# define COLORS_HPP
+# define RED "\033[0;31m"
+# define GREEN "\033[0;32m"
+# define YELLOW "\033[0;33m"
+# define BLUE "\033[0;34m"
+# define MAGENTA "\033[0;35m"
+# define CYAN "\033[0;36m"
+# define RESET "\033[0m"
+# define BOLD "\033[1m"
+# define UNDERLINE "\033[4m"
+# define REVERSE "\033[7m"
+#endif
 
 #include <iostream>
 
@@ -41,11 +54,11 @@ class ClapTrap {
     unsigned int getEnergyPoints() const;
     unsigned int getAtackDamage() const;
 
-    void attack(std::string const &target);
+    void attack(const std::string &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 };
 
-std::ostream &operator<<(std::ostream &COUT, const ClapTrap &clapTrap);
+std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 
 #endif

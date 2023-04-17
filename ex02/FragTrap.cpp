@@ -6,50 +6,50 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/19 14:34:02 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/17 20:08:28 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap() {
-    std::cout << "FragTrap default constructor called" << std::endl;
     this->_hitPoints = 100;
     this->_energyPoints = 100;
     this->_attackDamage = 30;
+    std::cout << GREEN << "[FragTrap][unnamed] Default constructor called" << RESET << std::endl;
 }
 
 FragTrap::FragTrap(const std::string name) : ClapTrap(name) {
-    std::cout << "FragTrap name constructor called" << std::endl;
     this->_hitPoints = 100;
     this->_energyPoints = 100;
     this->_attackDamage = 30;
+    std::cout << GREEN << "[FragTrap][" << name << "] Name constructor called" << RESET << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &toCopy) : ClapTrap(toCopy) {
-    std::cout << "FragTrap copy constructor called" << std::endl;
+    std::cout << RED << "[ClapTrap][" << this->_name <<  "] Copy constructor called" << RESET << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &toCopy) {
-    std::cout << "FragTrap default constructor called" << std::endl;
     if (this != &toCopy) {
         (std::string) this->_name = (std::string)toCopy._name;
         this->_hitPoints = toCopy._hitPoints;
         this->_energyPoints = toCopy._energyPoints;
         this->_attackDamage = toCopy._attackDamage;
     }
+    std::cout << GREEN << "[FragTrap][" << toCopy._name <<  "] Assigned constructor called" << RESET << std::endl;
     return *this;
 }
 
 FragTrap::~FragTrap() {
-    std::cout << "FragTrap destructor called" << std::endl;
+    std::cout << GREEN << "[FragTrap][" << _name << "] Destructor called" << RESET << std::endl;
 }
 
 void FragTrap::highFiveGuys() {
-    std::cout << "FragTrap " << this->_name << " request a mega high fives" << std::endl;
+    std::cout << GREEN << "[FragTrap][" << this->_name << "] request a mega high fives" << RESET << std::endl;
 }
 
-std::ostream &operator<<(std::ostream &COUT, const FragTrap &fragTrap) {
-    COUT << fragTrap.getName();
+std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap) {
+    COUT << FragTrap.getName();
     return COUT;
 }
