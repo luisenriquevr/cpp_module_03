@@ -6,14 +6,14 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 21:57:08 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/20 17:22:06 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/17 20:08:58 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef DIAMONDTRAP_HPP
-#define DIAMONDTRAP_HPP
+#ifndef DiamondTrap_HPP
+#define DiamondTrap_HPP
 
 #include <iostream>
 

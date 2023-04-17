@@ -6,14 +6,14 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:43 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/15 19:28:43 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/17 20:07:53 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#ifndef ClapTrap_HPP
+#define ClapTrap_HPP
 
 # include <iostream>
 
@@ -46,6 +46,6 @@ class ClapTrap {
     void beRepaired(unsigned int amount);
 };
 
-std::ostream &operator<<(std::ostream &COUT, const ClapTrap &clapTrap);
+std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:40 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/15 20:34:57 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/17 20:07:53 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,14 +73,14 @@ void ClapTrap::attack(std::string const &target) {
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
-    std::cout << "Claptrap " << this->getName() << " takes " << amount << " points of damage." << std::endl;
+    std::cout << "ClapTrap " << this->getName() << " takes " << amount << " points of damage." << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-    std::cout << "Claptrap " << this->getName() << " repairs " << amount << " points of damage." << std::endl;
+    std::cout << "ClapTrap " << this->getName() << " repairs " << amount << " points of damage." << std::endl;
 }
 
-std::ostream &operator<<(std::ostream &COUT, const ClapTrap &clapTrap) {
-    COUT << clapTrap.getName();
+std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap) {
+    COUT << ClapTrap.getName();
     return COUT;
 }

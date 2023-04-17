@@ -6,14 +6,14 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:32:17 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/19 14:41:59 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/17 20:08:28 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef FragTrap_HPP
+#define FragTrap_HPP
 
 #include <iostream>
 
@@ -31,6 +31,6 @@ class FragTrap : public virtual ClapTrap {
     void highFiveGuys(void);
 };
 
-std::ostream &operator<<(std::ostream &COUT, const FragTrap &fragTrap);
+std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap);
 
 #endif

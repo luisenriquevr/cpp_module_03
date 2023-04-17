@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/15 19:29:06 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/17 20:08:14 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void ScavTrap::guardGate() {
     std::cout << "ScavTrap " << this->_name << " enterred in Gate keeper mode" << std::endl;
 }
 
-std::ostream &operator<<(std::ostream &COUT, const ScavTrap &scavTrap) {
-    COUT << scavTrap.getName();
+std::ostream &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap) {
+    COUT << ScavTrap.getName();
     return COUT;
 }

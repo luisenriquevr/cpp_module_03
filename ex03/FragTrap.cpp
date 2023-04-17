@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/03/19 14:34:04 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/17 20:08:28 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void FragTrap::highFiveGuys() {
     std::cout << "FragTrap " << this->_name << " request a mega high fives" << std::endl;
 }
 
-std::ostream &operator<<(std::ostream &COUT, const FragTrap &fragTrap) {
-    COUT << fragTrap.getName();
+std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap) {
+    COUT << FragTrap.getName();
     return COUT;
 }
