@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/17 20:08:14 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 21:06:56 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 ScavTrap::ScavTrap(const ScavTrap &toCopy) : ClapTrap(toCopy) {
     std::cout << BLUE << "[ScavTrap][" << this->_name << "] Copy constructor called" << RESET << std::endl;
 }
-
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &toCopy) {
     if (this != &toCopy) {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:32:17 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/17 20:08:28 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 21:07:47 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ class FragTrap : public virtual ClapTrap {
     FragTrap &operator=(const FragTrap &toCopy);
     ~FragTrap();
 
-    void highFiveGuys(void);
+    void attack(const std::string &target);
+    void highFiveGuys();
 };
 
 std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap);

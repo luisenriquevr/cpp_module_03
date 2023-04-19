@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/17 20:08:28 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 20:56:22 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ FragTrap::FragTrap(const std::string name) : ClapTrap(name) {
 }
 
 FragTrap::FragTrap(const FragTrap &toCopy) : ClapTrap(toCopy) {
-    std::cout << RED << "[ClapTrap][" << this->_name <<  "] Copy constructor called" << RESET << std::endl;
+    std::cout << GREEN << "[Fragtrap][" << this->_name <<  "] Copy constructor called" << RESET << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &toCopy) {
@@ -43,6 +43,10 @@ FragTrap &FragTrap::operator=(const FragTrap &toCopy) {
 
 FragTrap::~FragTrap() {
     std::cout << GREEN << "[FragTrap][" << _name << "] Destructor called" << RESET << std::endl;
+}
+
+void FragTrap::attack(const std::string &target) {
+    std::cout << GREEN << "[FragTrap][" << this->getName() << "] attacks [" << target << "], causing " << this->getAtackDamage() << " points of damage!" << RESET<< std::endl;
 }
 
 void FragTrap::highFiveGuys() {

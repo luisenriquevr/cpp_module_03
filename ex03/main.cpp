@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/17 20:08:58 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 21:14:46 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,16 @@ int main() {
     DiamondTrap aquel;
     DiamondTrap este(aquel);
     DiamondTrap otro("hola");
+    std::cout << "---------------------------" << std::endl;
     
-
-    std::cout << "yo has " << yo.getHitpoints() << " hitpoints" << std::endl;
-    std::cout << "tu has " << tu.getEnergyPoints() << " hitpoints" << std::endl;
-    std::cout << "el has " << el.getAtackDamage() << " hitpoints" << std::endl;
-    std::cout << "aquel has " << aquel.getAtackDamage() << " hitpoints" << std::endl;
-    std::cout << "este has " << este.getAtackDamage() << " hitpoints" << std::endl;
-    std::cout << "otro has " << otro.getAtackDamage() << " hitpoints" << std::endl;
+    std::cout << YELLOW << "[DiamondTrap][" << otro.getName() << "] has " << otro.getHitpoints() << " hitpoints, " << otro.getEnergyPoints() << " energyPoints and " << otro.getAtackDamage() << " atackDamage" << RESET << std::endl;
+    std::cout << GREEN << "[FragTrap][" << yo.getName() << "] has " << yo.getHitpoints() << " hitpoints" << RESET << std::endl;
+    std::cout << YELLOW << "[DiamondTrap][" << otro.getName() << "] has " << otro.getHitpoints() << " hitpoints" << RESET << std::endl;
+    std::cout << GREEN << "[FragTrap][" << tu.getName() << "] has " << tu.getEnergyPoints() << " energyPoints" << RESET << std::endl;
+    std::cout << GREEN << "[FragTrap][" << el.getName() << "] has " << el.getAtackDamage() << " atackDamage" << RESET << std::endl;
+    std::cout << YELLOW << "[DiamondTrap][" << aquel.getName() << "] has " << aquel.getAtackDamage() << " atackDamage" << RESET << std::endl;
+    std::cout << YELLOW << "[DiamondTrap][" << este.getName() << "] has " << este.getAtackDamage() << " atackDamage" << RESET << std::endl;
+    std::cout << "---------------------------" << std::endl;
 
     yo.attack("tu");
     tu.takeDamage(4);
@@ -48,6 +50,7 @@ int main() {
     aquel.attack("este");
     este.highFiveGuys();
     otro.whoAmI();
+    std::cout << "---------------------------" << std::endl;
 
     return 0;
 }

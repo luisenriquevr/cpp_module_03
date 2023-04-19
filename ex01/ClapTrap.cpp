@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:40 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/17 20:31:08 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 21:55:43 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,12 @@ void ClapTrap::attack(const std::string &target) {
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
+    this->_hitPoints = 0 ? (this->_hitPoints - amount) < 0 : (this->_hitPoints -= amount);
     std::cout << RED << "[ClapTrap][" << this->getName() << "] takes " << amount << " points of damage." << RESET << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
+    this->_hitPoints += amount;
     std::cout << RED << "[ClapTrap][" << this->getName() << "] repairs " << amount << " points of damage." << RESET << std::endl;
 }
 
