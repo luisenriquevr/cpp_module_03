@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 22:17:01 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 22:52:36 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class ClapTrap {
 
    public:
     ClapTrap();
-    ClapTrap(const std::string name);
+    explicit ClapTrap(const std::string &name);
     ClapTrap(const ClapTrap &toCopy);
     ClapTrap &operator=(const ClapTrap &toCopy);
     ~ClapTrap();

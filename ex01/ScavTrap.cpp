@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 22:28:38 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 22:37:29 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ ScavTrap::~ScavTrap() {
 }
 
 void ScavTrap::attack(const std::string &target) {
-    std::cout << BLUE << "[ScavTrap][" << this->getName() << "] attacks [" << target << "], causing " << this->getAtackDamage() << " points of damage!" << RESET<< std::endl;
+    std::cout << BLUE << "[ScavTrap][" << this->getName() << "] attacks [" << target << "], causing " << this->getAtackDamage() << " points of damage!" << RESET << std::endl;
 }
 
 void ScavTrap::guardGate() {
@@ -55,7 +55,7 @@ void ScavTrap::guardGate() {
 }
 
 std::ostream &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap) {
-    COUT << BLUE << "[ScavTrap] " <<  "Name: " << ScavTrap._name << " HP: " << ScavTrap._hitPoints
-		<< " EP: " << ScavTrap._energyPoints << " Attack Damage: " << ScavTrap._attackDamage << RESET <<std::endl;
+    COUT << BLUE << "[ScavTrap] " << "Name: " << ScavTrap._name << " HP: " << ScavTrap._hitPoints
+		<< " EP: " << ScavTrap._energyPoints << " Attack Damage: " << ScavTrap._attackDamage << RESET << std::endl;
     return COUT;
 }
