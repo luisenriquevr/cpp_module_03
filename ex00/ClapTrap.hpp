@@ -6,14 +6,15 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 22:03:16 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 22:17:01 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef ClapTrap_HPP
-# define ClapTrap_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+
 #ifndef COLORS_HPP
 # define COLORS_HPP
 # define RED "\033[0;31m"
@@ -57,8 +58,9 @@ class ClapTrap {
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
+
+    friend  std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 };
 
-std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 
 #endif

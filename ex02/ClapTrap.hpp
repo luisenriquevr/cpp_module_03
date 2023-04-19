@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/12 11:54:43 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/17 20:07:53 by lvarela          ###   ########.fr       */
+/*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
+/*   Updated: 2023/04/19 22:18:11 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#ifndef ClapTrap_HPP
-# define ClapTrap_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+
 #ifndef COLORS_HPP
 # define COLORS_HPP
 # define RED "\033[0;31m"
@@ -32,10 +33,10 @@
 
 class ClapTrap {
    protected:
-    std::string _name;
-    unsigned int _hitPoints;
-    unsigned int _energyPoints;
-    unsigned int _attackDamage;
+    std::string     _name;
+    unsigned int    _hitPoints;
+    unsigned int    _energyPoints;
+    unsigned int    _attackDamage;
 
    public:
     ClapTrap();
@@ -57,8 +58,9 @@ class ClapTrap {
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
+
+    friend  std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 };
 
-std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 
 #endif

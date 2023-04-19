@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/17 20:09:46 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 22:28:12 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ int main() {
     ScavTrap el;
     ScavTrap otro(yo);
     ScavTrap aquel = el;
-
     std::cout << "---------------------------" << std::endl;
+
+    std::cout << yo;
+    std::cout << "---------------------------" << std::endl;
+
     std::cout << BLUE << "[ScavTrap][" << otro.getName() << "] has " << otro.getHitpoints() << " hitpoints, " << otro.getEnergyPoints() << " energyPoints and " << otro.getAtackDamage() << " atackDamage" << RESET << std::endl;
     std::cout << BLUE << "[ScavTrap][" << yo.getName() << "] has " << yo.getHitpoints() << " hitpoints" << RESET << std::endl;
     std::cout << BLUE << "[ScavTrap][" << otro.getName() << "] has " << otro.getHitpoints() << " hitpoints" << RESET << std::endl;

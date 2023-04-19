@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:03 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 22:05:40 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/19 22:15:08 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void ClapTrap::beRepaired(unsigned int amount) {
 }
 
 std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap) {
-    COUT << RED << "[ClapTrap] " <<  "Name: " << ClapTrap.getName() << " HP: " << ClapTrap.getHitpoints()
-		<< " EP: " << ClapTrap.getEnergyPoints() << " Attack Damage: " << ClapTrap.getAtackDamage() << RESET <<std::endl;
+    COUT << RED << "[ClapTrap] " <<  "Name: " << ClapTrap._name << " HP: " << ClapTrap._hitPoints
+		<< " EP: " << ClapTrap._energyPoints << " Attack Damage: " << ClapTrap._attackDamage << RESET <<std::endl;
     return COUT;
 }
