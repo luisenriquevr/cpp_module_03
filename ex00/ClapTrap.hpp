@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 22:52:36 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/20 19:48:13 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ class ClapTrap {
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 
-    friend  std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 };
 
+std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 
 #endif

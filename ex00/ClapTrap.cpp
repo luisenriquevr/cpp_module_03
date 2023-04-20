@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:03 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 22:37:51 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/20 19:48:47 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ClapTrap::ClapTrap() : _name("unnamed"), _hitPoints(10), _energyPoints(10), _att
     std::cout << RED << "[ClapTrap][unnamed] Default constructor called" << RESET << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
     std::cout << RED << "[ClapTrap][" << name << "] Name constructor called" << RESET << std::endl;
 }
 
@@ -83,7 +83,7 @@ void ClapTrap::beRepaired(unsigned int amount) {
 }
 
 std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap) {
-    COUT << RED << "[ClapTrap] " << "Name: " << ClapTrap._name << " HP: " << ClapTrap._hitPoints
-		<< " EP: " << ClapTrap._energyPoints << " Attack Damage: " << ClapTrap._attackDamage << RESET <<std::endl;
+    COUT << RED << "[ClapTrap] " << "Name: " << ClapTrap.getName() << " HP: " << ClapTrap.getHitpoints()
+		<< " EP: " << ClapTrap.getEnergyPoints() << " Attack Damage: " << ClapTrap.getAtackDamage() << RESET <<std::endl;
     return COUT;
 }
