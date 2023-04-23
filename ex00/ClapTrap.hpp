@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/20 19:48:13 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/23 20:06:29 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ class ClapTrap {
     std::string getName() const;
     unsigned int getHitpoints() const;
     unsigned int getEnergyPoints() const;
-    unsigned int getAtackDamage() const;
+    unsigned int getAttackDamage() const;
 
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
