@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 20:56:22 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/25 20:01:05 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,21 @@ FragTrap::~FragTrap() {
 }
 
 void FragTrap::attack(const std::string &target) {
-    std::cout << GREEN << "[FragTrap][" << this->getName() << "] attacks [" << target << "], causing " << this->getAtackDamage() << " points of damage!" << RESET<< std::endl;
+    if (this->_energyPoints)
+        std::cout << GREEN << "[FragTrap][" << this->getName() << "] attacks [" << target << "], causing " << this->getAttackDamage() << " points of damage!" << RESET<< std::endl;
+    else
+        std::cout << GREEN << "[FragTrap][" << this->getName() << "] can not attack [" << target << "], is dead." << RESET<< std::endl;
 }
 
 void FragTrap::highFiveGuys() {
-    std::cout << GREEN << "[FragTrap][" << this->_name << "] request a mega high fives" << RESET << std::endl;
+    if (this->_energyPoints)
+        std::cout << GREEN << "[FragTrap][" << this->_name << "] request a mega high fives" << RESET << std::endl;
+    else
+        std::cout << GREEN << "[FragTrap][" << this->_name << "] can not request a mega high fives, is dead." << RESET << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap) {
-    COUT << FragTrap.getName();
+    COUT << GREEN << "[FragTrap] " << "Name: " << FragTrap.getName() << " HP: " << FragTrap.getHitpoints()
+		<< " EP: " << FragTrap.getEnergyPoints() << " Attack Damage: " << FragTrap.getAttackDamage() << RESET <<std::endl;
     return COUT;
 }

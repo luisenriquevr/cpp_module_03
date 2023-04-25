@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:40:22 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 21:35:38 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/25 19:45:07 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ DiamondTrap::~DiamondTrap() {
 
 void	DiamondTrap::attack(const std::string &target) {
 	ScavTrap::attack(target);
-	std::cout << YELLOW << "[DiamondTrap][" << this->getName() << "] attacks [" << target << "], causing " << this->getAtackDamage() << " points of damage!" << RESET<< std::endl;
+	std::cout << YELLOW << "[DiamondTrap][" << this->getName() << "] attacks [" << target << "], causing " << this->getAttackDamage() << " points of damage!" << RESET<< std::endl;
 }
 
 void DiamondTrap::whoAmI() {
 	if (this->_hitPoints <= 0)
-		std::cout << YELLOW << "[DiamondTrap][" << this->_name << "] is dead" << RESET << std::endl;
+		std::cout << YELLOW << "[DiamondTrap][" << this->_name << "] is dead." << RESET << std::endl;
 	else {
 		std::cout << YELLOW << "[DiamondTrap] name is [" << this->_name << "]" << RESET << std::endl;
 		std::cout << YELLOW << "[SubCTrap] name is [" << this->_name << "]" << RESET << std::endl;
