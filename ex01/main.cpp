@@ -6,37 +6,49 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 22:28:12 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/23 21:07:56 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 int main() {
+    std::cout << "---- Name constructor -------------" << std::endl;
     ScavTrap yo("yo");
     ScavTrap tu("tu");
+
+    std::cout << "---- Default constructor ----------" << std::endl;
     ScavTrap el;
-    ScavTrap otro(yo);
-    ScavTrap aquel = el;
-    std::cout << "---------------------------" << std::endl;
 
+    std::cout << "---- Copy constructor -------------" << std::endl;
+    ScavTrap nosotros(yo);
+
+    std::cout << "---- Assigned copy constructor ----" << std::endl;
+    ScavTrap vosotros;
+    vosotros = tu;
+
+    std::cout << "---- Values -----------------------" << std::endl;
     std::cout << yo;
-    std::cout << "---------------------------" << std::endl;
+    std::cout << tu;
+    std::cout << el;
+    std::cout << nosotros;
+    std::cout << vosotros;
 
-    std::cout << BLUE << "[ScavTrap][" << otro.getName() << "] has " << otro.getHitpoints() << " hitpoints, " << otro.getEnergyPoints() << " energyPoints and " << otro.getAtackDamage() << " atackDamage" << RESET << std::endl;
-    std::cout << BLUE << "[ScavTrap][" << yo.getName() << "] has " << yo.getHitpoints() << " hitpoints" << RESET << std::endl;
-    std::cout << BLUE << "[ScavTrap][" << otro.getName() << "] has " << otro.getHitpoints() << " hitpoints" << RESET << std::endl;
-    std::cout << BLUE << "[ScavTrap][" << tu.getName() << "] has " << tu.getEnergyPoints() << " energyPoints" << RESET << std::endl;
-    std::cout << BLUE << "[ScavTrap][" << el.getName() << "] has " << el.getAtackDamage() << " atackDamage" << RESET << std::endl;
-    std::cout << BLUE << "[ScavTrap][" << aquel.getName() << "] has " << aquel.getAtackDamage() << " atackDamage" << RESET << std::endl;
-    std::cout << "---------------------------" << std::endl;
-
+    std::cout << "---- Methods ----------------------" << std::endl;
     yo.attack("tu");
-    tu.takeDamage(4);
-    tu.beRepaired(3);
-    el.takeDamage(6);
-    el.attack("yo");
-    std::cout << "---------------------------" << std::endl;
+    tu.takeDamage(0);
+    tu.beRepaired(0);
+    el.attack("vosotros");
+    vosotros.takeDamage(0);
+
+    std::cout << "---- New values -------------------" << std::endl;
+    std::cout << yo;
+    std::cout << tu;
+    std::cout << el;
+    std::cout << nosotros;
+    std::cout << vosotros;
+
+    std::cout << "-----------------------------------" << std::endl;
 
     return 0;
 }

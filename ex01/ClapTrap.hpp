@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/19 22:53:41 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/23 21:02:09 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ class ClapTrap {
     ClapTrap();
     explicit ClapTrap(const std::string &name);
     ClapTrap(const ClapTrap &toCopy);
+    virtual ~ClapTrap();
+
     ClapTrap &operator=(const ClapTrap &toCopy);
-    ~ClapTrap();
 
     void setName(const std::string name);
     void setHitpoints(unsigned int hitpoints);
@@ -53,14 +54,14 @@ class ClapTrap {
     std::string getName() const;
     unsigned int getHitpoints() const;
     unsigned int getEnergyPoints() const;
-    unsigned int getAtackDamage() const;
+    unsigned int getAttackDamage() const;
 
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 
-    friend  std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 };
 
+std::ostream &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap);
 
 #endif
