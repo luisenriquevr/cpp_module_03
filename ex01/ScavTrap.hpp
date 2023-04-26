@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:15 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/25 18:56:45 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/26 19:46:13 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
 
 #include <iostream>
 
@@ -38,4 +35,3 @@ class ScavTrap : public ClapTrap {
 
 std::ostream &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap);
 
-#endif

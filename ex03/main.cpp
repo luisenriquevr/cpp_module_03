@@ -6,22 +6,9 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/25 19:23:37 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/26 20:00:55 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef COLORS_HPP
-# define COLORS_HPP
-# define RED "\033[0;31m"
-# define GREEN "\033[0;32m"
-# define YELLOW "\033[0;33m"
-# define BLUE "\033[0;34m"
-# define MAGENTA "\033[0;35m"
-# define CYAN "\033[0;36m"
-# define RESET "\033[0m"
-# define BOLD "\033[1m"
-# define UNDERLINE "\033[4m"
-# define REVERSE "\033[7m"
 
 #include "DiamondTrap.hpp"
 
@@ -54,5 +41,3 @@ int main() {
 
     return 0;
 }
-
-#endif

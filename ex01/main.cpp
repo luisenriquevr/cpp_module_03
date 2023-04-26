@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/23 21:07:56 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/26 20:08:23 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int main() {
     tu.beRepaired(0);
     el.attack("vosotros");
     vosotros.takeDamage(0);
+    yo.guardGate();
 
     std::cout << "---- New values -------------------" << std::endl;
     std::cout << yo;

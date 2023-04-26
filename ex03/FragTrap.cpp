@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/25 19:45:07 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/26 19:31:08 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void FragTrap::highFiveGuys() {
 }
 
 std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap) {
-    COUT << FragTrap.getName();
+    COUT << BLUE << "[FragTrap] " << "Name: " << FragTrap.getName() << " HP: " << FragTrap.getHitpoints()
+		<< " EP: " << FragTrap.getEnergyPoints() << " Attack Damage: " << FragTrap.getAttackDamage() << RESET << std::endl;
     return COUT;
 }

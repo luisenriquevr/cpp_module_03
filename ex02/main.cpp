@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/25 20:01:45 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/26 20:06:24 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int main() {
     tu.beRepaired(3);
     el.takeDamage(6);
     el.attack("yo");
+    yo.highFiveGuys();
     std::cout << "---------------------------" << std::endl;
 
     return 0;

@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/25 19:45:07 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/26 20:10:02 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ScavTrap::ScavTrap() : ClapTrap() {
     std::cout << BLUE << "[ScavTrap][unnamed] Default constructor called" << RESET << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
+ScavTrap::ScavTrap(const std::string name) : ClapTrap(name) {
     this->_hitPoints = 100;
     this->_energyPoints = 50;
     this->_attackDamage = 20;
@@ -60,7 +60,7 @@ bool    ScavTrap::getGateMode() const {
 
 void    ScavTrap::guardGate() {
     if (this->_energyPoints) {
-        if (this->_gateMode) {
+        if (!this->_gateMode) {
             this->_gateMode = true;
             std::cout << BLUE << "[ScavTrap][" << this->_name << "] is now in Gate keeper mode ON" << RESET << std::endl;
         }
