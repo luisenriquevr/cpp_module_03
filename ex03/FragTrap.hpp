@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:32:17 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/26 19:53:57 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 17:58:17 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public virtual ClapTrap {
-   private:
+class FragTrap : virtual public ClapTrap {
    public:
     FragTrap();
     FragTrap(const std::string name);
