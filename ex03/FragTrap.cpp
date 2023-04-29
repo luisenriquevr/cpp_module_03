@@ -6,23 +6,23 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/26 19:31:08 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 21:17:43 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap() {
-    this->_hitPoints = 100;
-    this->_energyPoints = 100;
-    this->_attackDamage = 30;
+    this->_hitPoints = this->_base_hitPoints;
+    this->_energyPoints = this->_base_energyPoints;
+    this->_attackDamage = this->_base_attackDamage;
     std::cout << GREEN << "[FragTrap][unnamed] Default constructor called" << RESET << std::endl;
 }
 
 FragTrap::FragTrap(const std::string name) : ClapTrap(name) {
-    this->_hitPoints = 100;
-    this->_energyPoints = 100;
-    this->_attackDamage = 30;
+    this->_hitPoints = this->_base_hitPoints;
+    this->_energyPoints = this->_base_energyPoints;
+    this->_attackDamage = this->_base_attackDamage;
     std::cout << GREEN << "[FragTrap][" << name << "] Name constructor called" << RESET << std::endl;
 }
 
@@ -60,7 +60,7 @@ void FragTrap::highFiveGuys() {
 }
 
 std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap) {
-    COUT << BLUE << "[FragTrap] " << "Name: " << FragTrap.getName() << " HP: " << FragTrap.getHitpoints()
-		<< " EP: " << FragTrap.getEnergyPoints() << " Attack Damage: " << FragTrap.getAttackDamage() << RESET << std::endl;
+    COUT << GREEN << "[FragTrap] " << "Name: " << FragTrap.getName() << " HP: " << FragTrap.getHitpoints()
+		<< " EP: " << FragTrap.getEnergyPoints() << " Attack Damage: " << FragTrap.getAttackDamage() << RESET <<std::endl;
     return COUT;
 }

@@ -6,17 +6,17 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:03 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/26 20:06:56 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 21:48:28 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : _name("unnamed"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+ClapTrap::ClapTrap() : _name("unnamed"), _hitPoints(_base_hitPoints), _energyPoints(_base_energyPoints), _attackDamage(_base_attackDamage) {
     std::cout << RED << "[ClapTrap][unnamed] Default constructor called" << RESET << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(_base_hitPoints), _energyPoints(_base_energyPoints), _attackDamage(_base_attackDamage) {
     std::cout << RED << "[ClapTrap][" << name << "] Name constructor called" << RESET << std::endl;
 }
 
@@ -77,7 +77,7 @@ void ClapTrap::attack(const std::string &target) {
 
 void ClapTrap::takeDamage(unsigned int amount) {
     if (this->_energyPoints) {
-        this->_hitPoints = 0 ? (this->_hitPoints - amount) < 0 : (this->_hitPoints -= amount);
+        this->_energyPoints = 0 ? (this->_energyPoints - amount) < 0 : (this->_energyPoints -= amount);
         std::cout << RED << "[ClapTrap][" << this->_name << "] takes " << amount << " points of damage" << RESET << std::endl;
     }
     else
@@ -85,7 +85,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-    this->_hitPoints += amount;
+    this->_energyPoints += amount;
     std::cout << RED << "[ClapTrap][" << this->_name << "] repairs " << amount << " points of damage" << RESET << std::endl;
 }
 

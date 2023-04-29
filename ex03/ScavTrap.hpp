@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:15 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 17:58:30 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 21:33:42 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 class ScavTrap : virtual public ClapTrap {
    private:
     bool    _gateMode;
+
+   protected:
+    static const unsigned int _base_hitPoints = 100;
+    static const unsigned int _base_energyPoints = 50;
+    static const unsigned int _base_attackDamage = 20;
+
    public:
     ScavTrap();
     explicit ScavTrap(const std::string name);
@@ -30,6 +36,8 @@ class ScavTrap : virtual public ClapTrap {
     void attack(const std::string &target);
     bool getGateMode() const;
     void guardGate();
+
 };
 
 std::ostream &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap);
+

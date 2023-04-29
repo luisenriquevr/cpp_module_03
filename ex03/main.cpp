@@ -6,39 +6,126 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:47 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 15:34:54 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 22:29:11 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 int main() {
+    std::cout << "---- Name constructor -------------" << std::endl;
+    ClapTrap yo("yo");
+    ScavTrap tu("tu");
+    FragTrap el("el");
+    DiamondTrap otro("hola");
+
+    std::cout << "---- Values -----------------------" << std::endl;
+    std::cout << yo;
+    std::cout << tu;
+    std::cout << el;
+    std::cout << otro;
+
+    std::cout << "---- Default constructor ----------" << std::endl;
+    ClapTrap nosotros;
+    ScavTrap vosotros;
+    FragTrap ellos;
+    DiamondTrap otros;
+
+    std::cout << "---- Values -----------------------" << std::endl;
+    std::cout << nosotros;
+    std::cout << vosotros;
+    std::cout << ellos;
+    std::cout << otros;
+
+    std::cout << "---- Copy constructor -------------" << std::endl;
+    ClapTrap yo2(yo);
+    ScavTrap tu2(tu);
+    FragTrap el2(el);
+    DiamondTrap otro2(otro);
+
+    std::cout << "---- Values -----------------------" << std::endl;
+    std::cout << yo2;
+    std::cout << tu2;
+    std::cout << el2;
+    std::cout << otro2;
+
+    std::cout << "---- Assigned copy constructor ----" << std::endl;
+    ClapTrap nosotros2;
+    nosotros2 = nosotros;
+    ScavTrap vosotros2;
+    vosotros2 = vosotros;
+    FragTrap ellos2;
+    ellos2 = ellos;
+    DiamondTrap otros2;
+    otros2 = otros;
+
+    std::cout << "---- Values -----------------------" << std::endl;
+    std::cout << nosotros2;
+    std::cout << vosotros2;
+    std::cout << ellos2;
+    std::cout << otros2;
+
+    std::cout << "---- Methods ----------------------" << std::endl;
+    yo.attack("tu");
+    tu.takeDamage(yo.getAttackDamage());
+    tu.beRepaired(3);
+    el.attack("otro");
+    otro.takeDamage(el.getAttackDamage());
+    ellos.highFiveGuys();
+    vosotros.guardGate();
+    otro2.whoAmI();
+    
+    std::cout << "---- Values -----------------------" << std::endl;
+    std::cout << yo;
+    std::cout << tu;
+    std::cout << el;
+    std::cout << otro;
+    std::cout << ellos;
+    std::cout << vosotros;
+
+    std::cout << "-----------------------------------" << std::endl;
+    return 0;
+}
+/*
+int main() {
+    std::cout << "---- Name constructor -------------" << std::endl;
     FragTrap yo("yo");
     FragTrap tu("tu");
-    FragTrap el;
-    DiamondTrap aquel;
-    DiamondTrap este(aquel);
-    DiamondTrap otro("hola");
-    std::cout << "---------------------------" << std::endl;
-    
-    std::cout << YELLOW << "[DiamondTrap][" << otro.getName() << "] has " << otro.getHitpoints() << " hitpoints, " << otro.getEnergyPoints() << " energyPoints and " << otro.getAttackDamage() << " atackDamage" << RESET << std::endl;
-    std::cout << GREEN << "[FragTrap][" << yo.getName() << "] has " << yo.getHitpoints() << " hitpoints" << RESET << std::endl;
-    std::cout << YELLOW << "[DiamondTrap][" << otro.getName() << "] has " << otro.getHitpoints() << " hitpoints" << RESET << std::endl;
-    std::cout << GREEN << "[FragTrap][" << tu.getName() << "] has " << tu.getEnergyPoints() << " energyPoints" << RESET << std::endl;
-    std::cout << GREEN << "[FragTrap][" << el.getName() << "] has " << el.getAttackDamage() << " atackDamage" << RESET << std::endl;
-    std::cout << YELLOW << "[DiamondTrap][" << aquel.getName() << "] has " << aquel.getAttackDamage() << " atackDamage" << RESET << std::endl;
-    std::cout << YELLOW << "[DiamondTrap][" << este.getName() << "] has " << este.getAttackDamage() << " atackDamage" << RESET << std::endl;
-    std::cout << "---------------------------" << std::endl;
 
+    std::cout << "---- Default constructor ----------" << std::endl;
+    FragTrap el;
+
+    std::cout << "---- Copy constructor -------------" << std::endl;
+    FragTrap nosotros(yo);
+
+    std::cout << "---- Assigned copy constructor ----" << std::endl;
+    FragTrap vosotros;
+    vosotros = tu;
+
+    std::cout << "---- Values -----------------------" << std::endl;
+    std::cout << yo;
+    std::cout << tu;
+    std::cout << el;
+    std::cout << nosotros;
+    std::cout << vosotros;
+
+    std::cout << "---- Methods ----------------------" << std::endl;
     yo.attack("tu");
-    tu.takeDamage(4);
-    otro.beRepaired(3);
-    el.takeDamage(6);
-    aquel.attack("este");
-    este.highFiveGuys();
-    otro.whoAmI();
-    std::cout << otro;
-    std::cout << "---------------------------" << std::endl;
+    tu.takeDamage(yo.getAttackDamage());
+    tu.beRepaired(3);
+    el.attack("vosotros");
+    vosotros.takeDamage(el.getAttackDamage());
+    yo.highFiveGuys();
+
+    std::cout << "---- New values -------------------" << std::endl;
+    std::cout << yo;
+    std::cout << tu;
+    std::cout << el;
+    std::cout << nosotros;
+    std::cout << vosotros;
+
+    std::cout << "-----------------------------------" << std::endl;
 
     return 0;
 }
+*/

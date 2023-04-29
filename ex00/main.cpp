@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvarela <lvarela@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:08 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/23 20:44:47 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 20:47:19 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int main() {
 
     std::cout << "---- Methods ----------------------" << std::endl;
     yo.attack("tu");
-    tu.takeDamage(0);
+    tu.takeDamage(yo.getAttackDamage());
     tu.beRepaired(0);
     el.attack("vosotros");
-    vosotros.takeDamage(0);
+    vosotros.takeDamage(el.getAttackDamage());
 
     std::cout << "---- New values -------------------" << std::endl;
     std::cout << yo;

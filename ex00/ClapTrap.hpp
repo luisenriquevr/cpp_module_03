@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/26 19:46:44 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 21:48:13 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@
 
 class ClapTrap {
    private:
+    static const unsigned int _base_hitPoints = 10;
+    static const unsigned int _base_energyPoints = 10;
+    static const unsigned int _base_attackDamage = 0;
+
     std::string     _name;
     unsigned int    _hitPoints;
     unsigned int    _energyPoints;

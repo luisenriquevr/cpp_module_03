@@ -6,24 +6,24 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/26 20:10:02 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 21:10:14 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap() {
-    this->_hitPoints = 100;
-    this->_energyPoints = 50;
-    this->_attackDamage = 20;
+    this->_hitPoints = this->_base_hitPoints;
+    this->_energyPoints = this->_base_energyPoints;
+    this->_attackDamage = this->_base_attackDamage;
     this->_gateMode = false;
     std::cout << BLUE << "[ScavTrap][unnamed] Default constructor called" << RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string name) : ClapTrap(name) {
-    this->_hitPoints = 100;
-    this->_energyPoints = 50;
-    this->_attackDamage = 20;
+    this->_hitPoints = this->_base_hitPoints;
+    this->_energyPoints = this->_base_energyPoints;
+    this->_attackDamage = this->_base_attackDamage;
     this->_gateMode = false;
     std::cout << BLUE << "[ScavTrap][" << name << "] Name constructor called" << RESET << std::endl;
 }

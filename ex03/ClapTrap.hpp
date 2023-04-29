@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 17:59:26 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/04/29 21:47:05 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@
 #include <iostream>
 
 class ClapTrap {
+   private:
+    static const unsigned int _base_hitPoints = 10;
+    static const unsigned int _base_energyPoints = 10;
+    static const unsigned int _base_attackDamage = 0;
+
    protected:
     std::string     _name;
     unsigned int    _hitPoints;
@@ -39,9 +44,8 @@ class ClapTrap {
     ClapTrap();
     explicit ClapTrap(const std::string &name);
     ClapTrap(const ClapTrap &toCopy);
-    virtual ~ClapTrap();
-
     ClapTrap &operator=(const ClapTrap &toCopy);
+    ~ClapTrap();
 
     void setName(const std::string name);
     void setHitpoints(unsigned int hitpoints);
