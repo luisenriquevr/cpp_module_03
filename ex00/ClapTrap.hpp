@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:06 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 21:48:13 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/01 00:18:44 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class ClapTrap {
     explicit ClapTrap(const std::string &name);
     ClapTrap(const ClapTrap &toCopy);
     ClapTrap &operator=(const ClapTrap &toCopy);
-    ~ClapTrap();
+    virtual ~ClapTrap();
 
     void setName(const std::string name);
     void setHitpoints(unsigned int hitpoints);
