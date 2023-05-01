@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:32:17 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 21:15:03 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ class FragTrap : public ClapTrap {
     void highFiveGuys();
 };
 
-std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap);
+std::ostream    &operator<<(std::ostream &COUT, const FragTrap &FragTrap);

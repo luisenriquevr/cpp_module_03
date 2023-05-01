@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 21:57:08 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 17:34:07 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ class DiamondTrap : virtual public ScavTrap, virtual public FragTrap {
     std::string getName() const;
 };
 
-std::ostream &operator<<(std::ostream &COUT, const DiamondTrap &DiamondTrap);
+std::ostream    &operator<<(std::ostream &COUT, const DiamondTrap &DiamondTrap);

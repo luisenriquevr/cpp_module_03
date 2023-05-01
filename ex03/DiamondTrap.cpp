@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:40:22 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 22:32:22 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ std::string	DiamondTrap::getName() const {
 	return this->_name;
 }
 
-std::ostream &operator<<(std::ostream &COUT, const DiamondTrap &DiamondTrap) {
+std::ostream    &operator<<(std::ostream &COUT, const DiamondTrap &DiamondTrap) {
     COUT << YELLOW << "[DiamondTrap] " << "Name: " << DiamondTrap.getName() << " HP: " << DiamondTrap.getHitpoints()
 		<< " EP: " << DiamondTrap.getEnergyPoints() << " Attack Damage: " << DiamondTrap.getAttackDamage() << std::endl
 		<< "[DiamondTrap]" << RED << "[ClapTrap] " << "Name: " << DiamondTrap.ClapTrap::getName() << " HP: " << DiamondTrap.ClapTrap::getHitpoints()

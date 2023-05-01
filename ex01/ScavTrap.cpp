@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 21:10:14 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void    ScavTrap::guardGate() {
         std::cout << BLUE << "[ScavTrap][" << this->_name << "] can not be in Gate keeper mode, is dead." << RESET << std::endl;
 }
 
-std::ostream &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap) {
+std::ostream    &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap) {
     COUT << BLUE << "[ScavTrap] " << "Name: " << ScavTrap.getName() << " HP: " << ScavTrap.getHitpoints()
 		<< " EP: " << ScavTrap.getEnergyPoints() << " Attack Damage: " << ScavTrap.getAttackDamage()
         << " Gate Mode: " << ScavTrap.getGateMode() << RESET << std::endl;

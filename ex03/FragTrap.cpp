@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 21:17:43 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void FragTrap::highFiveGuys() {
         std::cout << GREEN << "[FragTrap][" << this->_name << "] can not request a mega high fives, is dead." << RESET << std::endl;
 }
 
-std::ostream &operator<<(std::ostream &COUT, const FragTrap &FragTrap) {
+std::ostream    &operator<<(std::ostream &COUT, const FragTrap &FragTrap) {
     COUT << GREEN << "[FragTrap] " << "Name: " << FragTrap.getName() << " HP: " << FragTrap.getHitpoints()
 		<< " EP: " << FragTrap.getEnergyPoints() << " Attack Damage: " << FragTrap.getAttackDamage() << RESET <<std::endl;
     return COUT;

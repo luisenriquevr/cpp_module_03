@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:15 by lvarela           #+#    #+#             */
-/*   Updated: 2023/04/29 21:00:14 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ class ScavTrap : public ClapTrap {
 
 };
 
-std::ostream &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap);
+std::ostream    &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap);
 
