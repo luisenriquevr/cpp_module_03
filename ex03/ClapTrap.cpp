@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:55:03 by lvarela           #+#    #+#             */
-/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/03 15:49:06 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void ClapTrap::attack(const std::string &target) {
     if (this->_energyPoints)
         std::cout << RED << "[ClapTrap][" << this->_name << "] attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << RESET << std::endl;
     else
-        std::cout << RED << "[ClapTrap][" << this->_name << "] can not attack " << target << ", is dead." << RESET << std::endl;
+        std::cout << RED << "[ClapTrap][" << this->_name << "] can not attack " << target << ", is dead" << RESET << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
@@ -81,12 +81,19 @@ void ClapTrap::takeDamage(unsigned int amount) {
         std::cout << RED << "[ClapTrap][" << this->_name << "] takes " << amount << " points of damage" << RESET << std::endl;
     }
     else
-        std::cout << RED << "[ClapTrap][" << this->_name << "] can not take " << amount << " points of damage, is already dead." << RESET << std::endl;
+        std::cout << RED << "[ClapTrap][" << this->_name << "] can not take " << amount << " points of damage, is already dead" << RESET << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-    this->_energyPoints += amount;
-    std::cout << RED << "[ClapTrap][" << this->_name << "] repairs " << amount << " points of damage" << RESET << std::endl;
+    if (this->_energyPoints) {
+        if (this->_energyPoints + amount > this->_base_energyPoints)
+            this->_energyPoints = this->_base_energyPoints;
+        else
+            this->_energyPoints += amount;
+        std::cout << RED << "[ClapTrap][" << this->_name << "] repairs " << amount << " points of damage" << RESET << std::endl;
+    }
+    else 
+        std::cout << RED << "[ClapTrap][" << this->_name << "] can't repairs " << amount << " points of damage, is dead" << RESET << std::endl;
 }
 
 std::ostream    &operator<<(std::ostream &COUT, const ClapTrap &ClapTrap) {

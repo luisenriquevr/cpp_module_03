@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:40:22 by lvarela           #+#    #+#             */
-/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/03 15:45:04 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	DiamondTrap::attack(const std::string &target) {
 
 void DiamondTrap::whoAmI() {
 	if (this->_hitPoints <= 0)
-		std::cout << YELLOW << "[DiamondTrap][" << this->_name << "] is dead." << RESET << std::endl;
+		std::cout << YELLOW << "[DiamondTrap][" << this->_name << "] is dead" << RESET << std::endl;
 	else {
 		std::cout << YELLOW << "[DiamondTrap] name is [" << this->_name << "]" << RESET << std::endl;
 		std::cout << YELLOW << "[SubCTrap] name is [" << ClapTrap::getName() << "]" << RESET << std::endl;
