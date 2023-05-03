@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 11:54:31 by lvarela           #+#    #+#             */
-/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/03 15:48:03 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ScavTrap::ScavTrap() : ClapTrap() {
     this->_hitPoints = this->_base_hitPoints;
     this->_energyPoints = this->_base_energyPoints;
     this->_attackDamage = this->_base_attackDamage;
-    this->_gateMode = false;
+    this->_gateMode = this->_base_gateMode;
     std::cout << BLUE << "[ScavTrap][unnamed] Default constructor called" << RESET << std::endl;
 }
 
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name) {
     this->_hitPoints = this->_base_hitPoints;
     this->_energyPoints = this->_base_energyPoints;
     this->_attackDamage = this->_base_attackDamage;
-    this->_gateMode = false;
+    this->_gateMode = this->_base_gateMode;
     std::cout << BLUE << "[ScavTrap][" << name << "] Name constructor called" << RESET << std::endl;
 }
 
@@ -51,7 +51,7 @@ void    ScavTrap::attack(const std::string &target) {
     if (this->_energyPoints)
         std::cout << BLUE << "[ScavTrap][" << this->_name << "] attacks [" << target << "], causing " << this->getAttackDamage() << " points of damage!" << RESET << std::endl;
     else
-        std::cout << BLUE << "[ScavTrap][" << this->_name << "] can not attack " << target << ", is dead." << RESET << std::endl;
+        std::cout << BLUE << "[ScavTrap][" << this->_name << "] can not attack " << target << ", is dead" << RESET << std::endl;
 }
 
 bool    ScavTrap::getGateMode() const {
@@ -70,7 +70,7 @@ void    ScavTrap::guardGate() {
         }
     }
     else
-        std::cout << BLUE << "[ScavTrap][" << this->_name << "] can not be in Gate keeper mode, is dead." << RESET << std::endl;
+        std::cout << BLUE << "[ScavTrap][" << this->_name << "] can not be in Gate keeper mode, is dead" << RESET << std::endl;
 }
 
 std::ostream    &operator<<(std::ostream &COUT, const ScavTrap &ScavTrap) {

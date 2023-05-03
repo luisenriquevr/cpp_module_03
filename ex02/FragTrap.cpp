@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:20:58 by lvarela           #+#    #+#             */
-/*   Updated: 2023/05/01 15:04:16 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/03 15:45:04 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,14 +49,14 @@ void FragTrap::attack(const std::string &target) {
     if (this->_energyPoints)
         std::cout << GREEN << "[FragTrap][" << this->getName() << "] attacks [" << target << "], causing " << this->getAttackDamage() << " points of damage!" << RESET<< std::endl;
     else
-        std::cout << GREEN << "[FragTrap][" << this->getName() << "] can not attack [" << target << "], is dead." << RESET<< std::endl;
+        std::cout << GREEN << "[FragTrap][" << this->getName() << "] can not attack [" << target << "], is dead" << RESET<< std::endl;
 }
 
 void FragTrap::highFiveGuys() {
     if (this->_energyPoints)
         std::cout << GREEN << "[FragTrap][" << this->_name << "] request a mega high fives" << RESET << std::endl;
     else
-        std::cout << GREEN << "[FragTrap][" << this->_name << "] can not request a mega high fives, is dead." << RESET << std::endl;
+        std::cout << GREEN << "[FragTrap][" << this->_name << "] can not request a mega high fives, is dead" << RESET << std::endl;
 }
 
 std::ostream    &operator<<(std::ostream &COUT, const FragTrap &FragTrap) {
