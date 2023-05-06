@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:40:22 by lvarela           #+#    #+#             */
-/*   Updated: 2023/05/03 15:45:04 by lvarela          ###   ########.fr       */
+/*   Updated: 2023/05/06 18:33:45 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ DiamondTrap::DiamondTrap(const std::string name) : ClapTrap(name + "_clap_name")
     std::cout << YELLOW << "[DiamondTrap][" << this->_name << "] Name constructor called" << RESET << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &toCopy) : ClapTrap(toCopy) {
+DiamondTrap::DiamondTrap(const DiamondTrap &toCopy) : ClapTrap(toCopy), _name(toCopy._name) {
     std::cout << YELLOW << "[Diamondtrap][" << this->_name <<  "] Copy constructor called" << RESET << std::endl;
 }
 
